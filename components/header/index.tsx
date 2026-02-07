@@ -17,7 +17,7 @@ import { IoClose } from "react-icons/io5";
 const navItems = [
   { label: "Materiallar va buyumlar", href: "/" },
   { label: "Mashina mexanizmlar", href: "/page3" },
-  { label: "Qurilish ishlari", href: "qurilish ishlari" },
+  { label: "Qurilish ishlari", href: "/page5" },
   { label: "Kichik mexanizatsiya", href: "/kichik-mexanizatsiya" },
   { label: "Uskuna va qurilmalar", href: "/uskuna-va-qurilmalar" },
   { label: "Klassifikator", href: "/klassifikator" },
@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Top bar - Toshkent + til */}
+   
       <div className="bg-[#182041]">
         <div className="container1 hidden md:flex items-center justify-between">
           <div className="flex items-center gap-2 py-1">
@@ -41,7 +41,7 @@ const Header = () => {
             >
               Toshkent
             </a>
-            {/* Dropdown arrow */}
+ 
             <svg
               width="20"
               height="20"
@@ -50,7 +50,7 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M6.76688 7.74189L10.0002 10.9752L13.2335 7.74189C13.3107 7.66473 ... " // qisqartirdim, o'zingnikini saqla
+                d="M6.76688 7.74189L10.0002 10.9752L13.2335 7.74189C13.3107 7.66473 ... " 
                 fill="white"
               />
             </svg>
@@ -70,7 +70,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main header */}
+
       <div className="bg-[#202b57] py-2">
         <div className="container1 flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -84,7 +84,6 @@ const Header = () => {
             </h3>
           </div>
 
-          {/* Desktop icons */}
           <div className="hidden md:flex items-center gap-6">
             <FaSearch className="text-white text-xl cursor-pointer hover:text-gray-300" />
             <Image src={Ik1} alt="Icon 1" width={36} height={36} />
@@ -97,7 +96,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <button
             className="md:hidden text-white text-4xl"
             onClick={() => setOpen(true)}
@@ -108,7 +106,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Desktop navigation */}
+   
       <div className="hidden md:block bg-[#28366d] py-4">
         <nav className="container1">
           <ul className="flex items-center justify-between text-base">
@@ -133,17 +131,17 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Mobile Sidebar */}
+   
       <div
         className={`fixed top-0 right-0 w-[80%] sm:w-[70%] md:w-80 h-full bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between p-5 border-b border-gray-200">
+        <div className="flex items-center justify-between p-3 border-b border-gray-200">
           <div className="flex items-center gap-4">
             <Link href="/" onClick={() => setOpen(false)}>
               <div className="bg-black p-2 rounded-xl">
-                <Image src={Logo} alt="Logo" width={80} height={40} />
+                <Image src={Logo} alt="Logo" width={40} height={20} />
               </div>
             </Link>
             <h3 className="hidden sm:block text-base font-normal leading-tight">
@@ -153,7 +151,7 @@ const Header = () => {
             </h3>
           </div>
           <button
-            className="text-4xl text-gray-800"
+            className="text-3xl text-gray-800"
             onClick={() => setOpen(false)}
             aria-label="Close menu"
           >
@@ -161,7 +159,7 @@ const Header = () => {
           </button>
         </div>
 
-        <ul className="flex flex-col gap-5 mt-6 px-6 text-lg font-medium text-[#3d3d3d]">
+        <ul className="flex flex-col gap-2 mt-6 px-6 text-lg font-medium text-[#3d3d3d]">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -182,7 +180,7 @@ const Header = () => {
           })}
         </ul>
 
-        {/* Mobile bottom icons */}
+ 
         <div className="absolute bottom-6 left-6 right-6 flex flex-wrap items-center justify-center gap-5 bg-black p-4 rounded-xl">
           <FaSearch className="text-white text-xl" />
           <Image src={Ik1} alt="Icon 1" width={36} height={36} />
@@ -196,7 +194,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"

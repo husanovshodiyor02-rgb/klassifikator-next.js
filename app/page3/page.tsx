@@ -305,7 +305,7 @@ const Page3 = () => {
                 <LayoutGrid size={24} />
               </button>
             </Link>
-            <Link href="/page2">
+            <Link href="/page7">
               <button className="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-200 rounded transition">
                 <Grid3X3 size={24} />
               </button>
