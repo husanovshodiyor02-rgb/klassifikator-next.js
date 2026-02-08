@@ -5,6 +5,7 @@ import Ft2 from "@/public/img/ft2.png";
 import Ft3 from "@/public/img/ft3.png";
 import Ft4 from "@/public/img/ft4.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -14,9 +15,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row gap-8">
             <div>
               <div className="flex items-center gap-3">
-                <a href="/">
+                <Link href="/">
                   <Image src={Logo} alt="" />
-                </a>
+                </Link>
                 <h3 className="font-normal text-base text-white">
                   Qurilishda texnik me’yorlash <br /> va standartlashtirish{" "}
                   <br />

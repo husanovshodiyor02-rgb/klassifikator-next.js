@@ -1,4 +1,5 @@
-
+import Image from "next/image";
+import Dt1 from '@/public/dt1.png'
 
 const Page7 = () => {
     const products = [
@@ -159,8 +160,8 @@ const Page7 = () => {
 
                 <div className="flex aspect-square w-full max-w-87.5 items-center justify-center rounded-lg bg-white p-6 shadow-sm">
            
-                  <img
-                    src="/dt1.png"
+                  <Image
+                    src={Dt1}
                     alt="Cement"
                     className="max-h-full max-w-full object-contain"
                   />
@@ -503,7 +504,7 @@ const Page7 = () => {
                       </td>
                       <td className="px-4 py-4">
                         <div className="h-26 w-26 bg-white p-1 shadow-sm rounded flex items-center justify-center">
-                          <img
+                          <Image
                             src={item.image}
                             alt="product"
                             className="max-h-full max-w-full object-contain"
