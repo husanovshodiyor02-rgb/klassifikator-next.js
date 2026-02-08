@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Klassifikator",
     images: [
       {
-        url: "/logo.png",
+        url: "/img/logo.png",
         width: 1200,
         height: 630,
         alt: "Klassifikator Sayti Rasmi",
